@@ -8,7 +8,7 @@ class News(BaseModel):
     short_description = models.CharField(max_length=500)
     body = models.TextField()
     view_count = models.IntegerField(default=0)
-    video = models.URLField(null=True)
+    video = models.URLField(blank=True, null=True)
 
     class Meta:
         verbose_name = _('News')
