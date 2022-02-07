@@ -16,7 +16,7 @@ class GalleryType(models.Model):
 
 class Gallery(BaseModel):
     image = models.ForeignKey('main.File', on_delete=models.CASCADE, null=True, blank=True, related_name='image')
-    video = models.URLField(null=True)
+    video = models.URLField(null=True, blank=True)
     type = models.ForeignKey(GalleryType, on_delete=models.SET_NULL, null=True, blank=True)
 
     class Meta:
